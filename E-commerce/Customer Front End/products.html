@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SoleSupplier-Your Fit Guaranteed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+<!-------------------------------------------Logo Area Above Navbar------------------------------------------------------------------------>
+
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1 id="logo">SoleSupplier</h1>      
+                <img src="images/logo.gif" width="150px" height="150px" id="logoImg">
+                <p id="slogan">Your Fit Guaranteed</p>
+            </div>
+        </div>
+
+<!-------------------------------------------Logo Area Above Navbar Ends Here-------------------------------------------------------------->
+
+<!-------------------------------------------Navbar Section-------------------------------------------------------------------------------->
+
+        <nav class="navbar">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group input-group">
+                            <input type="text" class="form-control" placeholder="Search all.." style="width: 700px;">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>        
+                        </div>
+                    </form>
+                </ul>
+                <!---------------------------------Account login/register-------------------------------------->
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-toggle="dropdown"><a href=""><span class="glyphicon glyphicon-user"></span><span class="caret"></span></a></li>
+                    <ul class="dropdown-menu">
+                        <li><a href="" data-toggle="modal" data-target="#login">Login</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#register">Register</a></li>
+                    </ul>
+                </ul>
+                <!---------------------------------Cart toggle and edit cart page------------------------------>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span><span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-cart" role="menu">
+                            <!---First item---->
+                            <li>
+                                <span class="item">
+                                    <span class="item-left">
+                                        <img src="http://lorempixel.com/50/50/"/>
+                                        <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                    </span>
+                                </span>
+                            </li>
+                            <!---Second item---->
+                            <li>
+                                <span class="item">
+                                    <span class="item-left">
+                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                        <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                    </span>
+                                </span>
+                            </li>
+                            <!---Third item---->
+                            <li>
+                                <span class="item">
+                                    <span class="item-left">
+                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                        <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                    </span>
+                                </span>
+                            </li>
+                            <!---Fourth item---->
+                            <li>
+                                <span class="item">
+                                    <span class="item-left">
+                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                        <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                    </span>
+                                </span>
+                            </li>
+                            <!--Edit Cart page link-->
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="cart.html">Edit Cart</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Modal for login -->
+        <div id="login" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Enter Email" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Enter Password" required><br>
+                        <!-- Modal for forgot password accessed from here -->
+                        <p id="forgot1"><a data-toggle="modal" data-target="#forgotPass">Forgot Password?</a></p>
+                    </div>
+
+                    <!-- Modal footer content -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Login</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for login Ends Here-->
+
+        <!-- Modal for forgot password-->
+        <div id="forgotPass" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Forgot Password?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Email" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Old Password" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="New Password" required><br>
+                    </div>
+
+                    <!-- Modal footer content -->    
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Send Email</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for forgot password Ends Here-->
+
+        <!-- Modal for register -->
+        <div id="register" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Register</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Name" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Gender" required><br>  
+                        <input type="email" class="form-control input-sm" placeholder="Email" required><br>
+                        <input type="email" class="form-control input-sm" placeholder="Confirm Email" required><br>
+                        <input type="password" class="form-control input-sm" placeholder="Password" required><br>
+                        <input type="password" class="form-control input-sm" placeholder="Confirm Password" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Date of birth" required><br>
+                        <!-- The paragraph below has a link to the privacy policy page for the user to accept and see -->
+                        <p>By creating an account you agree to our <a href="#">Terms & Conditions</a></p>
+                    </div>
+
+                    <!-- Modal footer content -->    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Register</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <!-- Modal for register Ends Here -->
+
+<!-------------------------------------------Navbar Section Ends Here---------------------------------------------------------------------->
+
+<!-------------------------------------------Product page Content including side nav and middle page content------------------------------->
+
+        <div class="container-fluid text-center">    
+            <div class="row content">
+                <!--Sidenav section which holds the refine by buttton for products-------->
+                <div class="col-sm-2 sidenav" style="text-align: left;">
+                    <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#demo" style="width: 170px">Refine by</button>
+                    <div id="demo" class="collapse">
+                        <br>
+                        <label data-toggle="collapse" data-target="#demo2">Brand</label>
+                        <div id="demo2" class="checkbox" style="margin-top: -5px; margin-left: 5px;">
+                            <label><input type="checkbox">Adidas</label><br>
+                            <label><input type="checkbox">Nike</label><br>
+                        </div>
+                        <br>
+                        <label data-toggle="collapse" data-target="#demo3">Age</label>
+                        <div  id="demo3" class="checkbox" style="margin-top: -5px; margin-left: 5px;">
+                            <label><input type="checkbox">10-20</label><br>
+                            <label><input type="checkbox">21-30</label><br> 
+                        </div>
+                        <br>
+                        <label data-toggle="collapse" data-target="#demo4">Gender</label>
+                        <div  id="demo4" class="checkbox" style="margin-top: -5px; margin-left: 5px;">
+                            <label><input type="checkbox">Male</label><br>
+                            <label><input type="checkbox">Female</label><br> 
+                        </div>
+                        <br>
+                        <label data-toggle="collapse" data-target="#demo5">Size</label>
+                        <div  id="demo5" class="checkbox" style="margin-top: -5px; margin-left: 5px;">
+                            <label><input type="checkbox">7</label><br>
+                            <label><input type="checkbox">7.5</label><br>
+                            <label><input type="checkbox">8</label><br>
+                            <label><input type="checkbox">8.5</label><br>
+                            <label><input type="checkbox">9</label><br>
+                            <label><input type="checkbox">9.5</label>
+                        </div>
+                        <br>
+                        <label data-toggle="collapse" data-target="#demo6">Style</label>
+                        <div  id="demo6" class="checkbox" style="margin-top: -5px; margin-left: 5px;">
+                            <label><input type="checkbox">Hi-top</label><br>
+                            <label><input type="checkbox">Low-top</label><br> 
+                        </div>
+                        <br>
+                        <label data-toggle="collapse" data-target="#demo7">Color</label>
+                        <div  id="demo7" class="checkbox" style="margin-top: -5px; margin-left: 5px;">
+                            <label><input type="checkbox">White</label><br>
+                            <label><input type="checkbox">Black</label><br>
+                            <label><input type="checkbox">Grey</label><br>
+                            <label><input type="checkbox">Blue</label><br>
+                            <label><input type="checkbox">Brown</label><br>
+                            <label><input type="checkbox">Red</label>
+                        </div>  
+                    </div>
+                </div>
+                <!--Sidenav section Ends Here-------->
+                
+                <!--First Line Products-->
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/jordan.png" class="img-responsive">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Air Jordan 1 x Off White</h3>
+                      <div class="pi-price">£550.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/yeezy.png" class="img-responsive">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Adidas Yeezy Boost 350 V2</h3>
+                      <div class="pi-price">$29.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/jordan4.png" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Air Jordan 4 x Levis</h3>
+                      <div class="pi-price">$29.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <!--Second Line Products-->
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/jordan.png" class="img-responsive">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Air Jordan 1 x Off White</h3>
+                      <div class="pi-price">£550.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/yeezy.png" class="img-responsive">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Adidas Yeezy Boost 350 V2</h3>
+                      <div class="pi-price">$29.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/jordan4.png" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Air Jordan 4 x Levis</h3>
+                      <div class="pi-price">$29.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <!--Third Line Products-->
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/jordan.png" class="img-responsive">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Air Jordan 1 x Off White</h3>
+                      <div class="pi-price">£550.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/yeezy.png" class="img-responsive">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Adidas Yeezy Boost 350 V2</h3>
+                      <div class="pi-price">$29.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/jordan4.png" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Air Jordan 4 x Levis</h3>
+                      <div class="pi-price">$29.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-------------------------------------------Product page Content including side nav Ends Here--------------------------------------------->
+
+<!-------------------------------------------Footer Section-------------------------------------------------------------------------------->
+
+        <footer class="container-fluid text-center">
+            <p>Subscribe to our website to keep updated!</p>
+            <form class="form-inline">
+                <input type="email" class="form-control" size="50" placeholder="Email Address">
+                <button type="button" class="btn btn-danger">Subscribe</button>
+            </form>
+            <p style="margin-top: 5px;">Copyright © 2017 Replace</p>
+        </footer>
+<!-------------------------------------------Footer Section Ends Here---------------------------------------------------------------------->
+    </body>
+</html>

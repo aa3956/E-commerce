@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>SoleSupplier-Your Fit Guaranteed</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">      
+      <link rel="stylesheet" href="styles.css">    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+     
+<!-------------------------------------------Logo Area Above Navbar------------------------------------------------------------------------>
+
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1 id="logo">SoleSupplier</h1>      
+                <img src="images/logo.gif" width="150px" height="150px" id="logoImg">
+                <p id="slogan">Your Fit Guaranteed</p>
+            </div>
+        </div>
+
+<!-------------------------------------------Logo Area Above Navbar Ends Here-------------------------------------------------------------->
+
+        <nav class="navbar" id="cartNav">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group input-group">
+                            <input type="text" class="form-control" placeholder="Search Nike, Adidas, Jordan, Yeezy etc." style="width: 700px;">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>        
+                        </div>
+                    </form>
+                </ul>
+                <!---------------------------------Account login/register-------------------------------------->
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-toggle="dropdown"><a href=""><span class="glyphicon glyphicon-user"></span><span class="caret"></span></a></li>
+                    <ul class="dropdown-menu">
+                        <li><a href="" data-toggle="modal" data-target="#login">Login</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#register">Register</a></li>
+                    </ul>
+                </ul>
+                <!---------------------------------Cart toggle and edit cart page------------------------------>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-shopping-cart"></span><span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <!---First item---->
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">
+                                            <img src="http://lorempixel.com/50/50/" alt="" />
+                                            <span class="item-info">
+                                                <span>Item name</span>
+                                                <span>23$</span>
+                                            </span>
+                                        </span>
+                                        <span class="item-right">
+                                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        </span>
+                                    </span>
+                                </li>
+                                <!---Second item---->
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">
+                                            <img src="http://lorempixel.com/50/50/" alt="" />
+                                            <span class="item-info">
+                                                <span>Item name</span>
+                                                <span>23$</span>
+                                            </span>
+                                        </span>
+                                        <span class="item-right">
+                                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        </span>
+                                    </span>
+                                </li>
+                                <!---Third item---->
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">
+                                            <img src="http://lorempixel.com/50/50/" alt="" />
+                                            <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                            </span>
+                                        </span>
+                                        <span class="item-right">
+                                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        </span>
+                                    </span>
+                                </li>
+                                <!---Fourth item---->
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">
+                                            <img src="http://lorempixel.com/50/50/" alt="" />
+                                            <span class="item-info">
+                                                <span>Item name</span>
+                                                <span>23$</span>
+                                            </span>
+                                        </span>
+                                        <span class="item-right">
+                                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        </span>
+                                    </span>
+                                </li>
+                            <!--Edit Cart page link-->
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="cart.html">Edit Cart</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Modal for login -->
+        <div id="login" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Enter Email" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Enter Password" required><br>
+                        <!-- Modal for forgot password accessed from here -->
+                        <p id="forgot1"><a data-toggle="modal" data-target="#forgotPass">Forgot Password?</a></p>
+                    </div>
+
+                    <!-- Modal footer content -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Login</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for login Ends Here-->
+
+        <!-- Modal for forgot password-->
+        <div id="forgotPass" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Forgot Password?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Email" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Old Password" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="New Password" required><br>
+                    </div>
+
+                    <!-- Modal footer content -->    
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Send Email</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for forgot password Ends Here-->
+
+        <!-- Modal for register -->
+        <div id="register" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Register</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Name" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Gender" required><br>  
+                        <input type="email" class="form-control input-sm" placeholder="Email" required><br>
+                        <input type="email" class="form-control input-sm" placeholder="Confirm Email" required><br>
+                        <input type="password" class="form-control input-sm" placeholder="Password" required><br>
+                        <input type="password" class="form-control input-sm" placeholder="Confirm Password" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Date of birth" required><br>
+                        <!-- The paragraph below has a link to the privacy policy page for the user to accept and see -->
+                        <p>By creating an account you agree to our <a href="#">Terms & Conditions</a></p>
+                    </div>
+
+                    <!-- Modal footer content -->    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Register</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <!-- Modal for register Ends Here -->
+
+<!--------------------------------------------------Navbar Ends Here----------------------------------------------------------------------->
+
+<!--------------------------------------------------Cartpage Content----------------------------------------------------------------------->
+        
+        <h1 style="margin-left: 75px; text-align: center;">Edit Your Basket</h1>
+        <br>
+        <div class="container">
+            <table id="cart" class="table table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th style="width:50%">Product</th>
+                        <th style="width:10%">Price</th>
+                        <th style="width:8%">Quantity</th>
+                        <th style="width:22%" class="text-center">Subtotal</th>
+                        <th style="width:10%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--First item in cart-->
+                    <tr>
+                        <td data-th="Product">
+                            <div class="row">
+                                <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+                                <div class="col-sm-10">
+                                    <h4 class="nomargin">Product 1</h4>
+                                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-th="Price">$1.99</td>
+                        <td data-th="Quantity">
+                            <input type="number" class="form-control text-center" value="1">
+                        </td>
+                        <td data-th="Subtotal" class="text-center">1.99</td>
+                        <td class="actions" data-th="">
+                            <button class="btn btn-danger" id="refreshbtn"><span class="fa fa-refresh" id="refreshicon"></span></button>
+                            <button class="btn btn-warning" id="deletebtn"><span class="fa fa-trash-o" id="deleteicon"></span></button>    
+                        </td>
+                    </tr>
+                    <!--Second item in cart-->
+                    <tr>
+                        <td data-th="Product">
+                            <div class="row">
+                                <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+                                <div class="col-sm-10">
+                                    <h4 class="nomargin">Product 2</h4>
+                                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-th="Price">$1.99</td>
+                        <td data-th="Quantity">
+                            <input type="number" class="form-control text-center" value="1">
+                        </td>
+                        <td data-th="Subtotal" class="text-center">1.99</td>
+                        <td class="actions" data-th="">
+                            <button class="btn btn-danger" id="refreshbtn"><span class="fa fa-refresh" id="refreshicon"></span></button>
+                            <button class="btn btn-warning" id="deletebtn"><span class="fa fa-trash-o" id="deleteicon"></span></button>    
+                        </td>
+                    </tr>
+                    <!--Third item in cart-->
+                    <tr>
+                        <td data-th="Product">
+                            <div class="row">
+                                <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+                                <div class="col-sm-10">
+                                    <h4 class="nomargin">Product 3</h4>
+                                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-th="Price">$1.99</td>
+                        <td data-th="Quantity">
+                            <input type="number" class="form-control text-center" value="1">
+                        </td>
+                        <td data-th="Subtotal" class="text-center">1.99</td>
+                        <td class="actions" data-th="">
+                            <button class="btn btn-danger" id="refreshbtn"><span class="fa fa-refresh" id="refreshicon"></span></button>
+                            <button class="btn btn-warning" id="deletebtn"><span class="fa fa-trash-o" id="deleteicon"></span></button>    
+                        </td>
+                    </tr>
+                    <!--Fourth item in cart-->
+                    <tr>
+                        <td data-th="Product">
+                            <div class="row">
+                                <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+                                <div class="col-sm-10">
+                                    <h4 class="nomargin">Product 3</h4>
+                                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-th="Price">$1.99</td>
+                        <td data-th="Quantity">
+                            <input type="number" class="form-control text-center" value="1">
+                        </td>
+                        <td data-th="Subtotal" class="text-center">1.99</td>
+                        <td class="actions" data-th="">
+                            <button class="btn btn-danger" id="refreshbtn"><span class="fa fa-refresh" id="refreshicon"></span></button>
+                            <button class="btn btn-warning" id="deletebtn"><span class="fa fa-trash-o" id="deleteicon"></span></button>    
+                        </td>
+                    </tr>
+                    <!--Fifth item in cart-->
+                    <tr>
+                        <td data-th="Product">
+                            <div class="row">
+                                <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+                                <div class="col-sm-10">
+                                    <h4 class="nomargin">Product 3</h4>
+                                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-th="Price">$1.99</td>
+                        <td data-th="Quantity">
+                            <input type="number" class="form-control text-center" value="1">
+                        </td>
+                        <td data-th="Subtotal" class="text-center">1.99</td>
+                        <td class="actions" data-th="">
+                            <button class="btn btn-danger" id="refreshbtn"><span class="fa fa-refresh" id="refreshicon"></span></button>
+                            <button class="btn btn-warning" id="deletebtn"><span class="fa fa-trash-o" id="deleteicon"></span></button>    
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="visible-xs">
+                        <td class="text-center"><strong>Total 1.99</strong></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="btn btn-warning">Continue Shopping</a></td>
+                        <td colspan="2" class="hidden-xs"></td>
+                        <td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
+                        <td><a href="#" class="btn btn-success btn-block">Checkout</a></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+<!--------------------------------------------------Cartpage Content Ends Here------------------------------------------------------------->
+
+         <footer class="container-fluid text-center">
+            <p>Subscribe to our website to keep updated!</p>
+          <form class="form-inline">
+            <input type="email" class="form-control" size="50" placeholder="Email Address">
+            <button type="button" class="btn btn-danger">Subscribe</button>
+          </form>
+          <p style="margin-top: 5px;">Copyright © 2017 Replace</p> 
+        </footer>
+
+    </body>
+</html>

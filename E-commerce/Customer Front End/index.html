@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SoleSupplier-Your Fit Guaranteed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+    </head>
+    <body>
+        
+<!-------------------------------------------Logo Area Above Navbar------------------------------------------------------------------------>
+        
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1 id="logo">SoleSupplier</h1>
+                <img src="images/logo.gif" width="150px" height="150px" id="logoImg">
+                <p id="slogan">Your Fit Guaranteed</p>
+            </div>
+        </div>
+
+<!-------------------------------------------Logo Area Above Navbar Ends Here-------------------------------------------------------------->
+
+<!-------------------------------------------Navbar Section-------------------------------------------------------------------------------->
+
+        <nav class="navbar">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group input-group">
+                            <input type="text" class="form-control" placeholder="Search Nike, Adidas, Jordan, Yeezy etc." style="width: 700px;">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>        
+                        </div>
+                    </form>
+                </ul>
+                <!---------------------------------Account login/register-------------------------------------->
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-toggle="dropdown"><a href=""><span class="glyphicon glyphicon-user"></span><span class="caret"></span></a></li>
+                    <ul class="dropdown-menu">
+                        <li><a href="" data-toggle="modal" data-target="#login">Login</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#register">Register</a></li>
+                    </ul>
+                </ul>
+                <!---------------------------------Cart toggle and edit cart page------------------------------>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-shopping-cart"></span><span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <!---First item---->
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">
+                                            <img src="http://lorempixel.com/50/50/" alt="" />
+                                            <span class="item-info">
+                                                <span>Item name</span>
+                                                <span>23$</span>
+                                            </span>
+                                        </span>
+                                        <span class="item-right">
+                                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        </span>
+                                    </span>
+                                </li>
+                                <!---Second item---->
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">
+                                            <img src="http://lorempixel.com/50/50/" alt="" />
+                                            <span class="item-info">
+                                                <span>Item name</span>
+                                                <span>23$</span>
+                                            </span>
+                                        </span>
+                                        <span class="item-right">
+                                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        </span>
+                                    </span>
+                                </li>
+                                <!---Third item---->
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">
+                                            <img src="http://lorempixel.com/50/50/" alt="" />
+                                            <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                            </span>
+                                        </span>
+                                        <span class="item-right">
+                                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        </span>
+                                    </span>
+                                </li>
+                                <!---Fourth item---->
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">
+                                            <img src="http://lorempixel.com/50/50/" alt="" />
+                                            <span class="item-info">
+                                                <span>Item name</span>
+                                                <span>23$</span>
+                                            </span>
+                                        </span>
+                                        <span class="item-right">
+                                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        </span>
+                                    </span>
+                                </li>
+                            <!--Edit Cart page link-->
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="cart.html">Edit Cart</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Modal for login -->
+        <div id="login" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Enter Email" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Enter Password" required><br>
+                        <!-- Modal for forgot password accessed from here -->
+                        <p id="forgot1"><a data-toggle="modal" data-target="#forgotPass">Forgot Password?</a></p>
+                    </div>
+
+                    <!-- Modal footer content -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Login</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for login Ends Here-->
+
+        <!-- Modal for forgot password-->
+        <div id="forgotPass" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Forgot Password?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Email" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Old Password" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="New Password" required><br>
+                    </div>
+
+                    <!-- Modal footer content -->    
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Send Email</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for forgot password Ends Here-->
+
+        <!-- Modal for register -->
+        <div id="register" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div id="bk" class="modal-content">
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:center; font-size: 30px; font-family: Harabara">Register</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control input-sm" placeholder="Name" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Gender" required><br>  
+                        <input type="email" class="form-control input-sm" placeholder="Email" required><br>
+                        <input type="email" class="form-control input-sm" placeholder="Confirm Email" required><br>
+                        <input type="password" class="form-control input-sm" placeholder="Password" required><br>
+                        <input type="password" class="form-control input-sm" placeholder="Confirm Password" required><br>
+                        <input type="text" class="form-control input-sm" placeholder="Date of birth" required><br>
+                        <!-- The paragraph below has a link to the privacy policy page for the user to accept and see -->
+                        <p>By creating an account you agree to our <a href="#">Terms & Conditions</a></p>
+                    </div>
+
+                    <!-- Modal footer content -->    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Register</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <!-- Modal for register Ends Here -->
+        
+<!-------------------------------------------Navbar Section Ends Here---------------------------------------------------------------------->
+
+<!-------------------------------------------Slideshow Section----------------------------------------------------------------------------->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="Carousel" class="carousel slide">
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#Carousel" data-slide-to="1"></li>
+                            <li data-target="#Carousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                  <div class="col-md-3"><a class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                </div><!--.row-->
+                            </div><!--.item-->
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                </div><!--.row-->
+                            </div><!--.item-->
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                    <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" style="max-width:100%;"></a></div>
+                                </div><!--.row-->
+                            </div><!--.item-->
+                        </div><!--.carousel-inner-->
+                        <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                        <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div><!--.Carousel-->
+                </div>
+            </div>
+        </div><br>
+        <script>
+            $(document).ready(function() {
+                $('#Carousel').carousel({
+                    interval: 5000
+                })
+            });
+        </script>
+
+<!-------------------------------------------Slideshow Section Ends Here------------------------------------------------------------------->
+
+<!-------------------------------------------Best Selling Section-------------------------------------------------------------------------->
+
+        <div class="container" id="homeContainer">
+            <h3 id="bestSelling" style="text-align: center; color: black">Best Selling This Week!</h3><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/jordan.png" class="img-responsive">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Air Jordan 1 x Off White</h3>
+                      <div class="pi-price">£1550.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/yeezy.png" class="img-responsive">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Adidas Yeezy Boost 350 V2</h3>
+                      <div class="pi-price">£365.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-item">
+                      <div class="pi-img-wrapper">
+                        <img src="images/jordan4.png" class="img-responsive" alt="Berry Lace Dress">
+                        <div>
+                          <a href="#" class="btn">Buy Now</a>
+                          <a href="#" class="btn">View</a>
+                        </div>
+                      </div>
+                      <h3 style="font-family: Harabara;">Air Jordan 4 x Levis</h3>
+                      <div class="pi-price">£750.00</div>
+                      <a class="btn add2cart"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-------------------------------------------Best Selling Section Ends Here---------------------------------------------------------------->
+        
+<!-------------------------------------------Footer Section-------------------------------------------------------------------------------->
+
+        <footer class="container-fluid text-center">
+            <p>Subscribe to our website to keep updated!</p>
+            <form class="form-inline">
+                <input type="email" class="form-control" size="50" placeholder="Email Address">
+                <button type="button" class="btn btn-danger">Subscribe</button>
+            </form>
+            <p style="margin-top: 5px;">Copyright © 2017 SoleSupplier</p>
+        </footer>
+<!-------------------------------------------Footer Section Ends Here---------------------------------------------------------------------->
+    </body>
+</html>
